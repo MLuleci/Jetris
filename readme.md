@@ -39,7 +39,7 @@ when holding down a key. Changing this delay amount or working around it is very
 difficult without tideous OS specific code as event delivery is inherently 
 something platform-dependent. See this [question](https://stackoverflow.com/questions/7537570/eliminating-initial-keypress-delay).
 
-Despite any issues believe my program has many merits. Browsing online for 
+Despite any issues I believe my program has many merits. Browsing online for 
 example Tetris implementations I didn't see many people using the clever, if
 I do say so myself, optimizations/tricks I used in my code. For example, the
 use of an aggregate array to keep track of the number of filled blocks per row

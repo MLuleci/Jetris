@@ -164,7 +164,6 @@ public class Main
         } else {
             down.restart();
         }
-        repaint();
     }
 
     /**
