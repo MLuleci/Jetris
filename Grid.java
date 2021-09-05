@@ -46,26 +46,22 @@ public class Grid
      */
     public int clear()
     {
-        // swap full rows with the next empty one
-        int i = 0;
-        int j = 0;
-        for (; j < 22; j++)
+        int n = 0;
+        for (int i = 0; i < 22; i++)
         {
-            if (this.rows[j] < 10) {
-                this.grid[i] = Arrays.copyOf(this.grid[j], 10);
-                this.rows[i] = this.rows[j];
-                i++;
+            if (rows[i] == 10) {
+                n++;
+                for (int j = i; j < 22; j++)
+                {
+                    if (j < 21) {
+                        rows[j] = rows[j+1];
+                        grid[j] = Arrays.copyOf(grid[j+1], 10);
+                    } else {
+                        rows[j] = 0;
+                        Arrays.fill(grid[j], 0);
+                    }
+                }
             }
-        }
-        
-        // line clear multiplier
-        int n = LINES[j - i];
-
-        // fill the top with zeroes
-        for (; i < 22; i++)
-        {
-            Arrays.fill(this.grid[i], 0);
-            rows[i] = 0;
         }
 
         return n;

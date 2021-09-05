@@ -43,10 +43,9 @@ Despite any issues I believe my program has many merits. Browsing online for
 example Tetris implementations I didn't see many people using the clever, if
 I do say so myself, optimizations/tricks I used in my code. For example, the
 use of an aggregate array to keep track of the number of filled blocks per row
-which simplifies checks when clearing lines (as opposed to a nested loop). Or
-the single-pass clearing algorithm (see `clear()` in `Grid`) which was inspired
-by quicksort. And of course, my favourite, the clever algorithm used to 
-calculate the drop distance of a piece (see `_drop()` in `Piece`).
+which simplifies checks when clearing lines (as opposed to a nested loop). And 
+of course, my favourite, the clever algorithm used to calculate the drop 
+distance of a piece (see `_drop()` in `Piece`).
 
 Aside from those, I tried to enforce strict encapsulation among classes; write
 plenty of *useful* comments; and adhere to a consistent code style. Some things
